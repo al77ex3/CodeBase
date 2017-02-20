@@ -12,3 +12,8 @@ grep "some_text" -ir
 
 ack "some_text"
 
+
+Example: 
+- search for files in the last 3 days and the result is written to a file;
+
+find . -mtime -3 -type f -printf '%TY-%Tm-%Td %TT %p\n' | sort -r > log.txt
